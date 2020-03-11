@@ -1,0 +1,4 @@
+https://drive.google.com/drive/folders/1VYCr9skR9A8wP1Ez39kJWHV0AHcvRUML
+
+
+The data is given uploaded at google drive. the best way to use this data is mounting the google drive at google colab and then use the data
