@@ -1,0 +1,14 @@
+===========================================
+HILBERT CURVE
+
+as you can find in this cool video on YouTube, Hilbert's Curve: Is
+infinite math useful?, you can map the frequency space to a 2 dimentional picture of vise versa.
+
+So one of my ideas to classify the tasks is to find the frequency components of the signals and then map them to a 
+2D picture and them classify them using CNN methods.
+
+
+===========================================
+Encoding the time series as Images
+
+as you can find in this article, https://medium.com/analytics-vidhya/encoding-time-series-as-images-b043becbdbf3,
