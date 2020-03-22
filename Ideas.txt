@@ -11,4 +11,5 @@ So one of my ideas to classify the tasks is to find the frequency components of 
 ===========================================
 Encoding the time series as Images
 
-as you can find in this article, https://medium.com/analytics-vidhya/encoding-time-series-as-images-b043becbdbf3, I want to turn the timeseries data into images and classify them using CNN methods
+as you can find in this article, https://medium.com/analytics-vidhya/encoding-time-series-as-images-b043becbdbf3, 
+I want to turn the timeseries data into images and classify them using CNN methods
