@@ -25,6 +25,22 @@ series it self. at each snapshot you can gather gather together the data on diff
 and then use the sequence of the images as different images to classify the EEG signals
 
 
+===========================================
+Transfer Learning
+ 
+I have frequently seen on the papers on the BCI classification that Transfer learning has a very good effect in the
+classification. So try to find the ANN architectures and use its first layers as transfer learning
+
+
+
+
+
+
+
+
+
+
+
 
 
 
