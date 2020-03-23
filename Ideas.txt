@@ -63,6 +63,16 @@ Time Frequency images
 
 The time Frequency images may be use as the input of a CNN classifier.
 
+============================================
+Multifractal cumulants and predictive complexcity
+
+As described in this artice : https://arxiv.org/pdf/1003.2879.pdf, Multifractal cumulants and predictive complexcity
+along with the power bands can increase the accuracy of classification
+
+
+
+
+
 
 
 
