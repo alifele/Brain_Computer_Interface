@@ -47,9 +47,16 @@ And then you can use the a few first layers of the trained model to build your f
 Time Convolutional Neural Network
 
 As you can find in this article : https://towardsdatascience.com/how-to-use-convolutional-neural-networks-for-time-series-classification-56b1b0a07a57
+
 CNN also can be used for time serires classification
 
 
+===========================================
+Echo State Neural Network
+
+As you can find in the following article : https://towardsdatascience.com/predicting-stock-prices-with-echo-state-networks-f910809d23d4
+
+I think it is good to have a ESN classifier in the voters ensmble
 
 
 
