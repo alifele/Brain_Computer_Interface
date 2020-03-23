@@ -29,9 +29,21 @@ and then use the sequence of the images as different images to classify the EEG 
 Transfer Learning
  
 I have frequently seen on the papers on the BCI classification that Transfer learning has a very good effect in the
-classification. So try to find the ANN architectures and use its first layers as transfer learning
+classification. So try to find the ANN architectures and use its first layers as transfer learning.
+
+p300speller classification may be some how similar 
 
 
+===========================================
+Another Idea for the Transfer learning
+
+It may be quite diffcult to find a trained model. One raw idea that I can propose is that make some new data (I don't know
+you can make some new by taking the every two signal and add the mean of them as the new data set.
+Then train the new model in which is a very heavy model with heavy training dataset.
+
+And then you can use the a few first layers of the trained model to build your final model.
+
+===========================================
 
 
 
