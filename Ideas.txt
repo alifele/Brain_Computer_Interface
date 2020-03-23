@@ -13,3 +13,19 @@ Encoding the time series as Images
 
 as you can find in this article, https://medium.com/analytics-vidhya/encoding-time-series-as-images-b043becbdbf3, 
 I want to turn the timeseries data into images and classify them using CNN methods
+
+
+
+
+===========================================
+Using the different channels in order to make images
+
+As you know, the data which is provided by the orgnizers are given in 63 channels in which each channel is a time
+series it self. at each snapshot you can gather gather together the data on different channels to make pictures
+and then use the sequence of the images as different images to classify the EEG signals
+
+
+
+
+
+
