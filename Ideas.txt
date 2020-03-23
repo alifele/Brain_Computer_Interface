@@ -58,6 +58,11 @@ As you can find in the following article : https://towardsdatascience.com/predic
 
 I think it is good to have a ESN classifier in the voters ensmble
 
+===========================================
+Time Frequency images
+
+The time Frequency images may be use as the input of a CNN classifier.
+
 
 
 
