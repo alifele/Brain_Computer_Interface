@@ -44,10 +44,10 @@ Then train the new model in which is a very heavy model with heavy training data
 And then you can use the a few first layers of the trained model to build your final model.
 
 ===========================================
+Time Convolutional Neural Network
 
-
-
-
+As you can find in this article : https://towardsdatascience.com/how-to-use-convolutional-neural-networks-for-time-series-classification-56b1b0a07a57
+CNN also can be used for time serires classification
 
 
 
