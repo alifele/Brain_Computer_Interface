@@ -49,6 +49,69 @@ def scalp_plotter(channels_data,t):
 
 
 
+def transform_1(x,y):
+  x = x/ 2
+  y = y/2
+  y_ = y
+  y = x
+  x = y_
+  return x,y
+
+
+def transform_2(x,y):
+  x = x/2
+  y = y/2
+  d = (x[2] - x[0]) 
+  D = (x[-1] - x[0] )
+  y  = y+d+D
+  return x,y
+
+
+def transform_3(x,y):
+  x = x/2
+  y = y/2
+  d = (x[2] - x[0]) 
+  D = (x[-1] - x[0] )
+  y = y + D +  d
+  x = x + D + d
+  return x,y
+
+
+def transform_4(x,y):
+  x = x/2
+  y = y/2
+  d = (x[2] - x[0]) 
+  D = (x[-1] - x[0])
+  a = x[-1]
+  x_ = a-y
+  y_ = a-x
+
+  x = x_
+  y = y_
+  
+  x = x+d+D
+
+
+  return x,y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def Hilbert_generator(n=5):
   '''
   by default this function will generate level 5 Hilbert curve which can condence 2^12 = 4096
