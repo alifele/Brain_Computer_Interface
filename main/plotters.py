@@ -47,3 +47,37 @@ def scalp_plotter(channels_data,t):
 
   return mat
 
+
+
+def Hilbert_generator(n=5):
+  '''
+  by default this function will generate level 5 Hilbert curve which can condence 2^12 = 4096
+  data into a matrix with size xint[-1] + 1. In which the x_int is x_int = x * 1/(x[2]-x[0])
+  '''
+  x = np.array([0,0,1,1])
+  y = np.array([0,1,1,0])
+  for i in range(n):
+    img_x = []
+    img_y = []
+    img_x += transform_1(x,y)[0].tolist()
+    img_y += transform_1(x,y)[1].tolist()
+    img_x += transform_2(x,y)[0].tolist()
+    img_y += transform_2(x,y)[1].tolist()
+    img_x += transform_3(x,y)[0].tolist()
+    img_y += transform_3(x,y)[1].tolist()
+    img_x += transform_4(x,y)[0].tolist() 
+    img_y += transform_4(x,y)[1].tolist()
+    x = np.array(img_x)
+    y = np.array(img_y)
+  return x,y
+
+
+
+def Hilbert_concat(x,y):
+  x_ = x.tolist()
+  x__ = x + (x[2]-x[0]) + x[-1]
+  x__ = x__.tolist()
+  x = x_ + x__
+  y = y.tolist() + y.tolist()
+
+  return np.array(x), np.array(y)
