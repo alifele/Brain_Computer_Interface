@@ -7,6 +7,15 @@ infinite math useful?, you can map the frequency space to a 2 dimentional pictur
 So one of my ideas to classify the tasks is to find the frequency components of the signals and then map them to a 
 2D picture and them classify them using CNN methods.
 
+You can find the Hilbert_curve notebook in this repository.
+
+Note:
+In my opinion, the Hilbert curve is very cool. Since if you look at it and trace some points on it you will find out 
+that this cutve is curving the time series and puts them beside each other. so the CNN may find some interesting dependency 
+in the data of time series which belong to different times.
+On the other hand starting the hilbert curve from another point (some thing like sliding the curve while concidering the jump between end point as the start point of the curve) will chage the neighbours of each point. so sliding the curve
+can be used to generate new data
+
 
 ===========================================
 Encoding the time series as Images
