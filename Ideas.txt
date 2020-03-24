@@ -71,7 +71,15 @@ along with the power bands can increase the accuracy of classification
 
 
 
+============================================
+The time frequency images 
 
+If I were to give you a plot which can describe the signal in a glance, I would certianly choose the 
+Time Frequency images. Because, although they have a trade off between frequency, but the have quite 
+adequate information about the signal. So DO NOT miss CNN methods with them.
+
+There are a lot of python packages which you can use to fasciliate your job. one of them is: 
+https://docs.scipy.org/doc/scipy/reference/signal.html
 
 
 
