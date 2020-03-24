@@ -97,7 +97,12 @@ There are a lot of python packages which you can use to fasciliate your job. one
 https://docs.scipy.org/doc/scipy/reference/signal.html
 
 
+============================================
+Video processing method
 
+The sequences of the scalp map are actually images with temporal dependency. So we can regard them 
+as videos and we can usethe video calssificatoin methods.
+Check out this article for more details : https://towardsdatascience.com/introduction-to-video-classification-6c6acbc57356
 
 
 
