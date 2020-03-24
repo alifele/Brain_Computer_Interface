@@ -25,6 +25,12 @@ I want to turn the timeseries data into images and classify them using CNN metho
 
 
 
+===========================================
+Making the Markove Transition Matrix 
+
+I think a very useful way to gather the transition is to make a 3D matrix in which the first layer
+represents the markov transition matrix of the first block in the scalp map
+
 
 ===========================================
 Using the different channels in order to make images
