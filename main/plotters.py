@@ -190,6 +190,20 @@ def data_to_HilbertMat(x,y,data=None, padding = 0, test=False, double_factor=1):
 
 
 
+############ Garmian #####################3
+
+def Scaler(x):
+  max_ = x.max()
+  min_ = x.min()
+  X = (x-max_ + x-min_)/(max_ - min_)
+  return X
+
+
+def Garmian_calculator(data):
+  data = Scaler(data)
+  Gar = data.reshape((-1,1)) * data.reshape((1,-1)) - ((1-data**2)**2).reshape((-1,1)) * ((1-data**2)**2).reshape((1,-1))
+  return Gar
+
 
 
 
