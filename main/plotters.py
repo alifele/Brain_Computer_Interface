@@ -95,23 +95,6 @@ def transform_4(x,y):
   return x,y
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def Hilbert_generator(n=5):
   '''
   by default this function will generate level 5 Hilbert curve which can condence 2^12 = 4096
@@ -135,8 +118,18 @@ def Hilbert_generator(n=5):
   return x,y
 
 
-
 def Hilbert_concat(x,y):
+
+  '''
+  this will concatenate tow Hilbert curves side by side in order to increase 
+  the amount of data that we want to condence into matrix
+
+  this function can increase the amount of data linearly (consider the way that
+  you want to increase the amount of the data by increasin the Hilbert level wich will 
+  enlarge the amount of data with factor of 4)
+
+
+  '''
   x_ = x.tolist()
   x__ = x + (x[2]-x[0]) + x[-1]
   x__ = x__.tolist()
@@ -144,3 +137,67 @@ def Hilbert_concat(x,y):
   y = y.tolist() + y.tolist()
 
   return np.array(x), np.array(y)
+
+
+
+def data_to_HilbertMat(x,y,data=None, padding = 0, test=False, double_factor=1):
+
+  '''
+  this function will condence the data into a matrix with a Hilbert curve order
+
+  if you want to check the functionality of the function do not pass any data.
+  instead set test as True.
+
+  If you are passing any concatinated Hilbert curve, set the double_factor to the 
+  number of blocks that you have put aside of each other.
+  For example if you have used Hilbert_concat once, then you should set the double_factor
+  equal to 2
+  '''
+
+  x_int = x * 1/(x[2]-x[0])
+  y_int = y * 1/(y[2]-y[0])
+  mat = np.zeros((int((x_int[-1]+1)/double_factor), int(x_int[-1]+1)))
+ 
+
+
+  if test == True:
+    x = np.linspace(0,20,x_int.shape[0])
+    data = np.sin(2*np.pi*1*x) + np.random.randn()
+
+  if data.shape[0]<len(x):
+    diff = len(x) - len(data)
+    data = data.tolist()
+    data = data + [padding] * (diff)
+    data = np.array(data)
+
+
+  #for i in range(mat.shape[1]):
+   # for j in range(mat.shape[0]):
+    #  mat[int(x_int[m]), int(y_int[m])] = data[m]
+      #print(x_int[m])
+     # m+=1
+
+  m = 0
+  while m<data.shape[0]:
+    mat[int(y_int[m]), int(x_int[m])] = data[m]
+    #print(x_int[m])
+    m+=1
+
+  return mat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
