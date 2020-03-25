@@ -206,8 +206,48 @@ def Garmian_calculator(data):
 
 
 
+################# Markov Transition Matrix ####################3
+def Markov_matrix_generator(bins, data, normal = True):
+  data = np.array(data)
+  b0 = bin_finder(bins, data[0])
+  W = np.zeros((len(bins), len(bins)))
+  for item in range(1,len(data)):
+    b1 = bin_finder(bins, data[item])
+    W[b0,b1]+=1
+    b0 = b1
+
+  if normal == True:
+    W = W / (W.sum(axis=1, keepdims = True) + 0.000001)  # This will normalize the W in which the transition probability in each row will sum to 1
+    return W
+
+  return W
 
 
+
+
+def bin_finder(bins, n):
+  '''
+  for example:
+    suppose that out bins is like this [1,3,5,7,9]
+
+    so this function will return the following values for 1.5, 3.45, 1, 5
+
+    1.5  ----> 0
+    3.45 ----> 1
+    1    ----> 0
+    5    ----> 2
+  '''
+  eps = 0.0001
+  d = bins[2] - bins[1]
+  n+=eps
+  return np.argmax((n>bins) * ((n-d)<bins))
+
+
+def bin_creator(data, n):
+  max_ = data.max()
+  min_ = data.min()
+  bins = np.linspace(np.ceil(min_)-1,np.floor(max_),n)
+  return bins
 
 
 
