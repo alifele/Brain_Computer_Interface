@@ -49,6 +49,9 @@ classification. So try to find the ANN architectures and use its first layers as
 p300speller classification may be some how similar 
 
 ** Note that the transfer learning works well Convolutional Neural Networks
+
+Check out this article that has use transfer learning for eeg classification
+https://ieeexplore.ieee.org/document/8772136
 ===========================================
 Another Idea for the Transfer learning
 
