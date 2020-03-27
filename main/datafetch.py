@@ -19,7 +19,7 @@ import os
 
 def fetch_subject(subject_id):
   fileroot = 'drive/My Drive/bcic'
-  subject_index = [i for i in range(1,16)]
+  subject_index = [i for i in range(0,16)]
   data = {}
   filepath = os.path.join(fileroot,'subj_{}.mat'.format(subject_index[subject_id]))
   f = h5py.File(filepath)
