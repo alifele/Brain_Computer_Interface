@@ -104,6 +104,7 @@ The sequences of the scalp map are actually images with temporal dependency. So 
 as videos and we can usethe video calssificatoin methods.
 Check out this article for more details : https://towardsdatascience.com/introduction-to-video-classification-6c6acbc57356
 
-
+this artice is also very very useful. check it out :
+https://machinelearningmastery.com/cnn-long-short-term-memory-networks/
 
 
