@@ -31,3 +31,49 @@ def fetch_subject(subject_id):
 
 #data.keys()
 
+
+
+
+
+def update_subjlist(sector):
+
+  if sector ==1:
+    subj_1 = datafetch.fetch_subject(1)
+    subj_2 = datafetch.fetch_subject(2)
+    subj_3 = datafetch.fetch_subject(3)
+    subj_4 = datafetch.fetch_subject(4)
+    subj_5 = datafetch.fetch_subject(5)
+    return np.array([subj_1, subj_2, subj_3, subj_4, subj_5, 1])
+
+
+  if sector ==2:
+    subj_6 = datafetch.fetch_subject(6)
+    subj_7 = datafetch.fetch_subject(7)
+    subj_8 = datafetch.fetch_subject(8)
+    subj_9 = datafetch.fetch_subject(9)
+    subj_10 = datafetch.fetch_subject(10)
+
+    return np.array([0,0,0,0,0] + [subj_6, subj_7, subj_8, subj_9, subj_10, 2])
+
+
+  if sector ==3:
+    subj_11 = datafetch.fetch_subject(11)
+    subj_12 = datafetch.fetch_subject(12)
+    subj_13 = datafetch.fetch_subject(13)
+    subj_14 = datafetch.fetch_subject(14)
+    subj_15 = datafetch.fetch_subject(15)
+
+    return np.array([0,0,0,0,0] + [0,0,0,0,0] + [subj_11, subj_12, subj_13, subj_14, subj_15, 3])
+
+
+
+def selector_desing(sector, classes=[1,4], trail=[0,24]):
+  selector = []
+  for i in range((sector-1)*5+1, sector*5+1):
+    for j in range(classes[0],classes[1]+1):
+      for k in range(0,trail[1]+1):
+        selector.append((i,j,k))
+  selector = np.array(selector)
+  np.random.shuffle(selector)
+
+  return selector
