@@ -250,16 +250,19 @@ def bin_creator(data, n):
   return bins
 
 
-
-def EEG_plotter(channels, data, size=(15,12)):
-  fig = plt.figure(figsize=size)
+def EEG_plotter(channels, data, size=(15,12), font=10):
+  fig = plt.figure(figsize=(15,12))
   diff = np.max(data)
-  a = plt.plot(data[:,:channels] + (diff+3)*np.arange(channels,0,-1))
-  b = plt.plot(np.zeros((7200,channels)) + (diff+3)*np.arange(channels,0,-1),'--', alpha = 0.8, color='gray')
-  plt.yticks([])
-  plt.legend( ['channel{}'.format(i+1) for i in range(channels) ])
 
+  ax = fig.add_subplot(1,1,1)
+  a = ax.plot(data[:,:channels] + (diff+3)*np.arange(channels,0,-1))
 
+  spacing = np.zeros((7200,channels)) + (diff+3)*np.arange(channels,0,-1)
+  b = ax.plot(spacing,'--', alpha = 0.8, color='gray')
+
+  c = ax.set_yticks((diff+3)*np.arange(channels,0,-1))
+  d = ax.set_yticklabels(['channel{}'.format(i+1) for i in range(channels)], fontsize=font)
+  #plt.legend( ['channel{}'.format(i) for i in range(channels) ])
 
 
 
