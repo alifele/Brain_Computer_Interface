@@ -1,8 +1,11 @@
 # Brain_Computer_Interface-Competition-
 
 
+# Hello there it is just for test
 
-This competition is held by the NBML institute (National Brain Mapping Lab). you can find the poster of the competition and also other materials in this repository.
+## She is the author of this artice
+
+![ ](/home/ali/Downloads/IMG-20200114-WA0000.jpg  "Competition")
 
 
 Team Memebers:
