@@ -101,7 +101,7 @@ https://docs.scipy.org/doc/scipy/reference/signal.html
 
 
 ============================================
-Video processing method
+Video processing method --> CNN+RNN
 
 The sequences of the scalp map are actually images with temporal dependency. So we can regard them 
 as videos and we can usethe video calssificatoin methods.
