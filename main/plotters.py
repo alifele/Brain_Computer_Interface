@@ -269,6 +269,41 @@ def EEG_plotter(channels, data, size=(15,12), font=10):
 
 
 
+def Localizer(subject_data, save=False):
+
+  #subject_data = subj_1['train_data_class1']
+  data = subject_data
+  FFT = []
+  t = np.linspace(0,3,7200)
+  f = np.linspace(1/3, 2400, 7200)
+  f_cut_min = 10
+  f_cut_max = 150
+  for trial in data:
+    fft = np.fft.fft(trial.T)
+    fft = fft.T
+    fft = fft[(f>f_cut_min)*(f<f_cut_max),:]
+
+    FFT.append(fft)
+  FFT = np.array(FFT)
+  f = f[(f>f_cut_min)*(f<f_cut_max)]
+  power = np.sum(np.abs(FFT), axis=1)
+  power = np.expand_dims(power, axis=1)
+  
+  #del_list=np.array([1,2,3,34,33])-1
+  #power[:,0:,del_list] = np.mean(power[:,0,:])
+
+  fig = plt.figure(figsize=(10,10))
+
+  for i in range(25):
+    ax = fig.add_subplot(5,5,i+1)
+    mat = scalp_plotter(power[i], 0)
+    im = ax.imshow(mat)
+    ax.axis('off')
+    #fig.colorbar(im)
+  plt.figure()
+  a = plt.plot(power[:,0,:].T**0.5)
+  #plt.legend(['trial{}'.format(i+1) for i in range(25)])
+
 
 
 
